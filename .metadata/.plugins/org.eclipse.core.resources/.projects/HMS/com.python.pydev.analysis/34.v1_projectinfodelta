@@ -1,0 +1,9 @@
+INSTUPPatient.views
+/home/boolow5/EclipseProjects/HMS/Patient/views.py
+INFOS:&&2|1|2|0&&2|3|2|0&&2|4|2|0&&2|5|2|0&&2|6|2|0
+register_patient=6
+patient_list=1
+Patient.views=2
+in_patient=4
+patient_profile=3
+out_patient=5

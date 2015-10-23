@@ -1,0 +1,10 @@
+{% block content %}
+	<h3>Menus:</h3>
+	<p> {{ url 'in_patient' }}
+	<p> {{ url "patient_list" }}
+	<ol>
+	{% for patient in patients %}
+		<a href="{% url 'patient_profile' pk=patient.pk %}" ><li> {{ patient }} </li></a>
+	{% endfor %}
+	</ol>
+{% endblock %}

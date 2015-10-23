@@ -1,0 +1,10 @@
+{% block content %}
+	<h3>Menus:</h3>
+	<p> {% url 'in_patient' %}</p>
+	<p> {% url "patient_list" %}</p>
+	<p> {% url "out_patient" %}</p>
+	<p> {% url "register_patient" %}</p>
+	<ol>
+	{{ form }}
+	</ol>
+{% endblock %}

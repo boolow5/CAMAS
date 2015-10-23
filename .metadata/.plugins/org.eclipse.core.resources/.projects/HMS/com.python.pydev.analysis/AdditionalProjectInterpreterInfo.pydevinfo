@@ -1,0 +1,95 @@
+-- VERSION_4
+-- START DISKCACHE_2
+/home/boolow5/EclipseProjects/.metadata/.plugins/org.eclipse.core.resources/.projects/HMS/com.python.pydev.analysis/v2_indexcache
+HMS.__init__|1445555528000000000|/home/boolow5/EclipseProjects/HMS/HMS/__init__.py
+HMS.urls|1445555855000000000|/home/boolow5/EclipseProjects/HMS/HMS/urls.py
+HMS.wsgi|1445555528000000000|/home/boolow5/EclipseProjects/HMS/HMS/wsgi.py
+manage|1445555528000000000|/home/boolow5/EclipseProjects/HMS/manage.py
+Patient.admin|1445559083000000000|/home/boolow5/EclipseProjects/HMS/Patient/admin.py
+Patient.forms|1445564030000000000|/home/boolow5/EclipseProjects/HMS/Patient/forms.py
+Patient.tests|1445555573000000000|/home/boolow5/EclipseProjects/HMS/Patient/tests.py
+Patient.migrations.__init__|1445555573000000000|/home/boolow5/EclipseProjects/HMS/Patient/migrations/__init__.py
+Patient.__init__|1445555573000000000|/home/boolow5/EclipseProjects/HMS/Patient/__init__.py
+Patient.models|1445558582000000000|/home/boolow5/EclipseProjects/HMS/Patient/models.py
+Patient.views|1445563895000000000|/home/boolow5/EclipseProjects/HMS/Patient/views.py
+Patient.migrations.0001_initial|1445558630000000000|/home/boolow5/EclipseProjects/HMS/Patient/migrations/0001_initial.py
+HMS.settings|1445555858000000000|/home/boolow5/EclipseProjects/HMS/HMS/settings.py
+Patient.urls|1445561791000000000|/home/boolow5/EclipseProjects/HMS/Patient/urls.py
+-- END DISKCACHE
+-- START DICTIONARY
+18
+14=Account
+8=HMS.urls
+3=HMS.wsgi
+16=patientForm.Meta
+15=Migration
+6=Patient.forms
+9=Payment
+17=Patient.visit
+10=Appointment
+18=patientForm
+1=Patient.models
+4=Patient.views
+5=Patient.migrations.0001_initial
+12=Patient
+2=HMS.settings
+13=Person
+7=Patient.urls
+11=Doctor
+-- END DICTIONARY
+-- START TREE 1
+25
+acc|1|Account!9@
+all|1|ALLOWED_HOSTS!19@
+app|2|application!27@Appointment!9@
+bas|1|BASE_DIR!19@
+dat|1|DATABASES!19@
+deb|1|DEBUG!19@
+doc|1|Doctor!9@
+in_|1|in_patient!34@
+ins|1|INSTALLED_APPS!19@
+lan|1|LANGUAGE_CODE!19@
+mid|1|MIDDLEWARE_CLASSES!19@
+mig|1|Migration!41@
+out|1|out_patient!34@
+pat|4|Patient!9@patient_profile!34@patient_list!34@patientForm!49@
+pay|1|Payment!9@
+per|1|Person!9@
+reg|1|register_patient!34@
+roo|1|ROOT_URLCONF!19@
+sec|1|SECRET_KEY!19@
+sta|2|STATIC_ROOT!19@STATIC_URL!19@
+tem|1|TEMPLATES!19@
+tim|1|TIME_ZONE!19@
+url|2|urlpatterns!59@urlpatterns!67@
+use|3|USE_I18N!19@USE_L10N!19@USE_TZ!19@
+wsg|1|WSGI_APPLICATION!19@
+-- END TREE
+-- START TREE 2
+25
+__s|4|__str__!9&10@__str__!10&10@__str__!11&10@__str__!12&10@
+add|1|address!13&11@
+amo|1|amount!9&11@
+bal|1|balance!14&11@
+cus|1|customer!9&11@
+dat|2|date!9&11@date!10&11@
+dep|1|dependencies!15&43@
+dia|1|diagnose!11&10@
+doc|1|doctor!10&11@
+fie|1|fields!16&51@
+ful|1|full_name!13&11@
+has|1|has_chronic_disorders!12&11@
+is_|1|is_in_patient!12&11@
+las|1|last_visit!17&11@
+met|1|Meta!18&49@
+mod|1|model!16&51@
+ope|1|operations!15&43@
+own|1|owner!14&11@
+pat|1|patient!10&11@
+pay|1|pay!12&10@
+pho|1|phone!13&11@
+ref|1|refer!11&10@
+reg|1|register_date!12&11@
+tak|1|take_med!12&10@
+vis|1|visit!12&10@
+-- END TREE

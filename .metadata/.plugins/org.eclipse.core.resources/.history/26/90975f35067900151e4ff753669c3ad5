@@ -1,0 +1,15 @@
+{% extends 'blog/base.html' %}
+{% block content %}
+	<div id="content">
+		
+		<p class='pub_date'>Published: {{ post.published_date }}</p>
+		<h3 class='news_title'> 
+		{{ post.title }}
+		</h3>
+		<p class='news_short_body'> {{ post.text }} 
+		
+		</p>
+		
+	
+	</div> <!-- content -->
+{% endblock %}

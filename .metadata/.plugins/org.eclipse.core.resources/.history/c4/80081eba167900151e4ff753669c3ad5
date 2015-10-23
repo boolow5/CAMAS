@@ -1,0 +1,15 @@
+from django.db import models
+from django.utils import timezone
+
+# Create your models here.
+class Patient(models.Model):
+    full_name = models.CharField(max_length=100)
+    address = models.CharField(max_length=100)
+    phone = models.IntegerField(default=0)
+    
+    is_in_patient = models.BooleanField(default=False)
+    has_chronic_disorders = models.BooleanField(default=False)
+    register_date = models.DateTimeField(default=timezone.now)
+    
+    
+    

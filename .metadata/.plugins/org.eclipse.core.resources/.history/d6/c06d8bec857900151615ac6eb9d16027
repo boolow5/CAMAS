@@ -1,0 +1,59 @@
+from django.db import models
+from django.utils import timezone
+
+# Create your models here.
+class Person(models.Model):
+    full_name = models.CharField(max_length=100)
+    address = models.CharField(max_length=100)
+    phone = models.IntegerField(default=0)
+
+class Patient(Person):
+           
+    is_in_patient = models.BooleanField(default=False)
+    has_chronic_disorders = models.BooleanField(default=False)
+    register_date = models.DateTimeField(default=timezone.now)
+    
+    def visit(self):
+        self.last_visit = timezone.now
+        
+    def pay(self, amount):
+        payment = Payment(customer = self, amount = amount)
+        payment.save()
+        
+    def take_med(self):
+        pass
+    
+    def __str__(self):
+        return self.full_name
+        
+    
+class Doctor(Person):
+    
+    def diagnose(self, patient):
+        pass
+    
+    def refer(self, patient):
+        pass
+    
+    def __str__(self):
+        return self.full_name
+
+class Appointment(models.Model):
+    patient = models.ForeignKey(Patient)
+    doctor = models.ForeignKey(Doctor)
+    date = models.DateTimeField()
+    def __str__(self):
+        return self.patient + ' wants to see ' + self.doctor
+    
+class Payment(models.Model):
+    customer = models.ForeignKey(Patient)
+    amount = models.FloatField()
+    date = models.DateTimeField(timezone.now)
+    def __str__(self):
+        return self.customer + ' paid ' + self.amount + ' @ ' + self.date
+    
+class Account(models.Model):
+    balance = models.FloatField(default=0)
+    owner = models.ForeignKey(Patient)
+    
+    

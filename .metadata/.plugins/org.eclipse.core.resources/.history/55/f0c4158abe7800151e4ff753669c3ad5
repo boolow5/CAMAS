@@ -1,0 +1,13 @@
+{% extends 'blog/base.html' %}
+{% block content %}
+	{% for post in posts %}
+		<article>
+		<h3> {% if post.published_date == django.utils.timezone.now %}
+				New: 
+			{% endif %} 
+		{{ post.title }}</h3>
+		<p> {{ post.text }} </p>
+		<p>Published: {{ post.published_date }}</p>
+		</article>
+	{% endfor %}
+{% endblock %}

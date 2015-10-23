@@ -1,0 +1,7 @@
+{% block content %}
+	<ol>
+	{% for patient in patients %}
+		<li> {{ patient }} </li>
+	{% endfor %}
+	</ol>
+{% endblock %}

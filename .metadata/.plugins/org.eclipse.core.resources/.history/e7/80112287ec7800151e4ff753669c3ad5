@@ -1,0 +1,17 @@
+{% extends 'blog/base.html' %}
+{% block content %}
+	{% for post in posts %}
+		<article class='news_article'>
+		<h3 class='news_title'> {% if post.published_date  == django.utils.timezone.now %}
+				New: 
+			{% endif %} 
+		{{ post.title }}
+		<div class='readmore'>Read More</div>
+		</h3>
+		<p class='news_short_body'> {{ post.text }} 
+		
+		</p>
+		<p 'pub_date'>Published: {{ post.published_date }}</p>
+		</article>
+	{% endfor %}
+{% endblock %}

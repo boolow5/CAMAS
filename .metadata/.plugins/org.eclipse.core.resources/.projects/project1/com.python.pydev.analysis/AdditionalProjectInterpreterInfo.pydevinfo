@@ -1,0 +1,69 @@
+-- VERSION_4
+-- START DISKCACHE_2
+/home/boolow5/EclipseProjects/.metadata/.plugins/org.eclipse.core.resources/.projects/project1/com.python.pydev.analysis/v2_indexcache
+project1.settings|1445517667000000000|/home/boolow5/EclipseProjects/project1/project1/settings.py
+project1.wsgi|1445516060000000000|/home/boolow5/EclipseProjects/project1/project1/wsgi.py
+blog.models|1445519643000000000|/home/boolow5/EclipseProjects/project1/blog/models.py
+blog.forms|1445549473000000000|/home/boolow5/EclipseProjects/project1/blog/forms.py
+manage|1445516060000000000|/home/boolow5/EclipseProjects/project1/manage.py
+blog.admin|1445517543000000000|/home/boolow5/EclipseProjects/project1/blog/admin.py
+blog.urls|1445550117000000000|/home/boolow5/EclipseProjects/project1/blog/urls.py
+blog.migrations.0001_initial|1445518178000000000|/home/boolow5/EclipseProjects/project1/blog/migrations/0001_initial.py
+project1.urls|1445518786000000000|/home/boolow5/EclipseProjects/project1/project1/urls.py
+blog.tests|1445516077000000000|/home/boolow5/EclipseProjects/project1/blog/tests.py
+blog.migrations.__init__|1445516077000000000|/home/boolow5/EclipseProjects/project1/blog/migrations/__init__.py
+blog.views|1445550181000000000|/home/boolow5/EclipseProjects/project1/blog/views.py
+project1.__init__|1445516060000000000|/home/boolow5/EclipseProjects/project1/project1/__init__.py
+blog.__init__|1445516077000000000|/home/boolow5/EclipseProjects/project1/blog/__init__.py
+-- END DISKCACHE
+-- START DICTIONARY
+13
+1=project1.settings
+2=project1.wsgi
+12=PostForm
+5=blog.models
+13=Post.publish
+6=blog.forms
+11=PostForm.Meta
+7=blog.urls
+10=Migration
+3=blog.migrations.0001_initial
+8=project1.urls
+9=Post
+4=blog.views
+-- END DICTIONARY
+-- START TREE 1
+18
+all|1|ALLOWED_HOSTS!11@
+app|1|application!19@
+bas|1|BASE_DIR!11@
+dat|1|DATABASES!11@
+deb|1|DEBUG!11@
+ins|1|INSTALLED_APPS!11@
+lan|1|LANGUAGE_CODE!11@
+mid|1|MIDDLEWARE_CLASSES!11@
+mig|1|Migration!25@
+pos|4|post_list!34@Post!41@post_detail!34@PostForm!49@
+roo|1|ROOT_URLCONF!11@
+sec|1|SECRET_KEY!11@
+sta|2|STATIC_URL!11@STATIC_ROOT!11@
+tem|1|TEMPLATES!11@
+tim|1|TIME_ZONE!11@
+url|2|urlpatterns!59@urlpatterns!67@
+use|3|USE_I18N!11@USE_L10N!11@USE_TZ!11@
+wsg|1|WSGI_APPLICATION!11@
+-- END TREE
+-- START TREE 2
+11
+__s|1|__str__!9&42@
+aut|1|author!9&43@
+cre|1|created_date!9&43@
+dep|1|dependencies!10&27@
+fie|1|fields!11&51@
+met|1|Meta!12&49@
+mod|1|model!11&51@
+ope|1|operations!10&27@
+pub|3|published_date!13&43@published_date!9&43@publish!9&42@
+tex|1|text!9&43@
+tit|1|title!9&43@
+-- END TREE

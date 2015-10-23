@@ -1,0 +1,15 @@
+MODULES_MANAGER_V2
+HMS.__init__|/home/boolow5/EclipseProjects/HMS/HMS/__init__.py
+HMS.settings|/home/boolow5/EclipseProjects/HMS/HMS/settings.py
+HMS.urls|/home/boolow5/EclipseProjects/HMS/HMS/urls.py
+HMS.wsgi|/home/boolow5/EclipseProjects/HMS/HMS/wsgi.py
+Patient.__init__|/home/boolow5/EclipseProjects/HMS/Patient/__init__.py
+Patient.admin|/home/boolow5/EclipseProjects/HMS/Patient/admin.py
+Patient.forms|/home/boolow5/EclipseProjects/HMS/Patient/forms.py
+Patient.migrations.0001_initial|/home/boolow5/EclipseProjects/HMS/Patient/migrations/0001_initial.py
+Patient.migrations.__init__|/home/boolow5/EclipseProjects/HMS/Patient/migrations/__init__.py
+Patient.models|/home/boolow5/EclipseProjects/HMS/Patient/models.py
+Patient.tests|/home/boolow5/EclipseProjects/HMS/Patient/tests.py
+Patient.urls|/home/boolow5/EclipseProjects/HMS/Patient/urls.py
+Patient.views|/home/boolow5/EclipseProjects/HMS/Patient/views.py
+manage|/home/boolow5/EclipseProjects/HMS/manage.py

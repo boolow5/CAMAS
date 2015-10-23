@@ -1,0 +1,15 @@
+{% block content %}
+	<h3>Menus:</h3>
+	<p> {% url 'in_patient' %}</p>
+	<p> {% url "patient_list" %}</p>
+	<p> {% url "out_patient" %}</p>
+	<p> {% url "register_patient" %}</p>
+	
+	<h1>Register new patient</h1>
+	
+		<form	method="POST"	class="register-form">{%	csrf_token	%}
+						{{	form.as_p	}}
+					<button	type="submit"	class="save	btn	btn-default">Save</button>
+		</form>
+	 
+{% endblock %}

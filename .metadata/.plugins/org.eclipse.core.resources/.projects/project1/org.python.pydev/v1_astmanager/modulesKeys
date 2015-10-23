@@ -1,0 +1,15 @@
+MODULES_MANAGER_V2
+blog.__init__|/home/boolow5/EclipseProjects/project1/blog/__init__.py
+blog.admin|/home/boolow5/EclipseProjects/project1/blog/admin.py
+blog.forms|/home/boolow5/EclipseProjects/project1/blog/forms.py
+blog.migrations.0001_initial|/home/boolow5/EclipseProjects/project1/blog/migrations/0001_initial.py
+blog.migrations.__init__|/home/boolow5/EclipseProjects/project1/blog/migrations/__init__.py
+blog.models|/home/boolow5/EclipseProjects/project1/blog/models.py
+blog.tests|/home/boolow5/EclipseProjects/project1/blog/tests.py
+blog.urls|/home/boolow5/EclipseProjects/project1/blog/urls.py
+blog.views|/home/boolow5/EclipseProjects/project1/blog/views.py
+manage|/home/boolow5/EclipseProjects/project1/manage.py
+project1.__init__|/home/boolow5/EclipseProjects/project1/project1/__init__.py
+project1.settings|/home/boolow5/EclipseProjects/project1/project1/settings.py
+project1.urls|/home/boolow5/EclipseProjects/project1/project1/urls.py
+project1.wsgi|/home/boolow5/EclipseProjects/project1/project1/wsgi.py

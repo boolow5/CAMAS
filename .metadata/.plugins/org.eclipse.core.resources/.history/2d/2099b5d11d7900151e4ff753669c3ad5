@@ -1,0 +1,7 @@
+{% block content %}
+	<ol>
+	{% for patient in patients %}
+		<a href="{% url 'patient_profile' pk=post.pk %}" ></a><li> {{ patient }} </li></a>
+	{% endfor %}
+	</ol>
+{% endblock %}

@@ -1,0 +1,9 @@
+#wrapper {
+	width: 90%;
+	margin: auto;
+	background-color: #DFF;
+}
+
+img {
+	max-height: 400px;
+}

@@ -1,0 +1,20 @@
+body {
+	background-color: #DFF;
+	margin: 0 auto;
+}
+#wrapper {
+	width: 90%;
+	margin: auto;
+	background: whitesmoke;
+}
+
+img {
+	max-height: 400px;
+}
+
+.news_article {
+ 	border: 1px solid gray;
+ 	width: 8em;
+ 	height: 12em;
+ 	border-radius: 10px 10px;
+}

@@ -1,0 +1,29 @@
+{% extends 'blog/base.html' %}
+
+{% block header %}
+	
+{% endblock %}
+
+{% block content %}
+<div id="content">
+	{% for post in posts %}
+		<article class='news_article'>
+		<p class='pub_date'>Published: {{ post.published_date }}</p>
+		<a href="{% url 'post_detail' pk=post.pk %}" ><h3 class='news_title'> {% if post.published_date  == django.utils.timezone.now %}
+				New: 
+			{% endif %} 
+		{{ post.title }}
+		</h3></a>
+		<p class='news_short_body'> {{ post.text }} 
+		
+		</p>
+		</article>
+	{% endfor %}
+	</div> <!-- content -->
+{% endblock %}
+
+
+
+{% block footer %}
+	
+{% endblock %}

@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Delete resource &apos;Django with venv&apos;" deleteContents="true" description="Delete resource &apos;Django with venv&apos;" element1="/Django with venv" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1445515658057"/>&#x0A;<refactoring comment="Delete resource &apos;project1/blog/static/css/style1.css~&apos;" deleteContents="false" description="Delete resource &apos;project1/blog/static/css/style1.css~&apos;" element1="/project1/blog/static/css/style1.css~" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1445546735276"/>
+</session>

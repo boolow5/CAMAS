@@ -1,0 +1,38 @@
+from django.shortcuts import render
+
+from .models import Patient
+from Patient.forms import patientForm
+from django.utils import timezone
+
+# Create your views here.
+def patient_list(request):
+    patients = Patient.objects.all()
+    return render(request, 'Patient/list.html', {'patients':patients})
+    
+def patient_profile(request, pk):
+    patient = Patient.objects.get(pk=pk)
+    return render(request, 'Patient/profile.html', {'patient':patient}) 
+
+def in_patient(request):
+    patients = Patient.objects.filter(is_in_patient=True)
+    return render(request, 'Patient/list.html', {'patients':patients})
+
+def out_patient(request):
+    patients = Patient.objects.filter(is_in_patient=False)
+    return render(request, 'Patient/list.html', {'patients':patients})
+
+def register_patient(request, pk):
+    if request.method == 'POST':
+        form = patientForm(request.POST)
+        if form.is_valid():
+            reg = form.save(commit=False)
+            reg.full_name = request.full_name
+            reg.address = request.address
+            reg.phone = request.phone
+            reg.is_in_patient = request.is_in_patient
+            reg.has_chronic_disorders = request.has_chronic_disorders
+            reg.registered_date = timezone.now
+            reg.save()
+    else:
+        form = patientForm()
+        return render(request, 'Patient/register.html', {'form':form})
