@@ -1,0 +1,11 @@
+{% extends 'Patient/base.html' %}
+
+{% block content %}	
+	<h3 onclick='$("#reg-form").slideToggle()' >Register new patient</h3>
+	
+		<form	method="POST"	class="register-form" id="#reg-form">{%	csrf_token	%}
+						{{	form.as_p	}}
+					<button	type="submit"	class="save	btn	btn-default">Register</button>
+		</form>
+	 
+{% endblock %}

@@ -1,5 +1,6 @@
 from django.db import models
 from django.utils import timezone
+from django.db.models.fields import DateTimeField
 
 # Create your models here.
 class Person(models.Model):
@@ -17,9 +18,17 @@ class Patient(Person):
     
     def __str__(self):
         return self.full_name
+
         
+class Employee(Person):
+    registered_date = models.DateField(timezone.now)
+    salary = models.DecimalField(default=0, decimal_places=2, max_digits=8)
+    user_type = models.TextField(default='Guest')
+    def __str__(self):
+        return self.full_name
     
-class Doctor(Person):
+    
+class Doctor(Employee):
     def __str__(self):
         return self.full_name
 
@@ -28,7 +37,23 @@ class Appointment(models.Model):
     doctor = models.ForeignKey(Doctor)
     date = models.DateTimeField()
     is_done = models.BooleanField(default=False)
-
     def __str__(self):
         return self.patient.__str__() + ' wants to see ' + self.doctor.__str__() + ' @ ' + self.date.__str__()
     
+class Account(models.Model):
+    debit = models.DecimalField(default=0.0, decimal_places=2, max_digits=8)
+    credit = models.DecimalField(default=0.0, decimal_places=2, max_digits=8)
+    date = models.DateTimeField(default=timezone.now)
+    def __str__(self):
+        return "Account Model"
+    
+class CustomerAccount(Account):
+    owner = models.ForeignKey(Patient)
+    def __str__(self):
+        return self.debit.sum()-self.credit.sum()
+    
+    
+class EmployeeAccount(Account):
+    owner = models.ForeignKey(Employee)
+    def __str__(self):
+        return self.debit.sum()-self.credit.sum()

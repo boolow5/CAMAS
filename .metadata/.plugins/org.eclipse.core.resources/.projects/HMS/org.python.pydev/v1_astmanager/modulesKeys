@@ -7,6 +7,7 @@ Patient.__init__|/home/boolow5/EclipseProjects/HMS/Patient/__init__.py
 Patient.admin|/home/boolow5/EclipseProjects/HMS/Patient/admin.py
 Patient.forms|/home/boolow5/EclipseProjects/HMS/Patient/forms.py
 Patient.migrations.0001_initial|/home/boolow5/EclipseProjects/HMS/Patient/migrations/0001_initial.py
+Patient.migrations.0002_auto_20151023_1704|/home/boolow5/EclipseProjects/HMS/Patient/migrations/0002_auto_20151023_1704.py
 Patient.migrations.__init__|/home/boolow5/EclipseProjects/HMS/Patient/migrations/__init__.py
 Patient.models|/home/boolow5/EclipseProjects/HMS/Patient/models.py
 Patient.tests|/home/boolow5/EclipseProjects/HMS/Patient/tests.py

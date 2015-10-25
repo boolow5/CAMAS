@@ -89,3 +89,8 @@ p.pub_date {
 #article_detail {
 	padding: 3em;
 }
+
+li.patient_list {
+	list-style-type:square;
+	
+}

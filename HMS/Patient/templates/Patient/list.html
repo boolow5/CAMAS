@@ -1,10 +1,23 @@
+{% extends 'Patient/base.html' %}
 {% block content %}
-	<h3>Menus:</h3>
-	<p> {% url 'in_patient' %}</p>
-	<p> {% url "patient_list" %}</p>
-	<ol>
+	{% if patient_type = 'all' %}
+		<a><h3 onclick='$("#pt-list1").slideToggle()' >All Patients</h3></a>
+	{% else %}
+		{% if patient_type = 'in' %}
+			<a><h3 onclick='$("#pt-list1").slideToggle()' >In-patients</h3></a>
+		{% else %}
+			{% if patient_type = 'out' %}
+				<a><h3 onclick='$("#pt-list1").slideToggle()' >Out-patients</h3></a>
+			{% else %}
+				<a><h3 onclick='$("#pt-list1").slideToggle()' >New Patient</h3></a>
+			{% endif %}
+		{% endif %}
+	{% endif %}
+	
+	<ul id='pt-list1'>
 	{% for patient in patients %}
-		<a href="{% url 'patient_profile' pk=patient.pk %}" ><li> {{ patient }} </li></a>
+		<a href="{% url 'patient_profile' pk=patient.pk %}" ><li class=patient_list > {{ patient.pk }} {{ patient.full_name }} </li></a>
 	{% endfor %}
-	</ol>
+	</ul>
+	
 {% endblock %}

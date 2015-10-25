@@ -1,0 +1,34 @@
+from django.shortcuts import render
+
+from .models import Patient, Doctor, Appointment
+from Patient.forms import patientForm
+from django.utils import timezone
+from django.contrib.redirects.models import Redirect
+
+# Create your views here.
+def patient_list(request):
+    patients = Patient.objects.all()
+    return render(request, 'Patient/list.html', {'patients':patients})
+    
+def patient_profile(request, pk):
+    patient = Patient.objects.get(pk=pk)
+    return render(request, 'Patient/profile.html', {'patient':patient}) 
+
+def in_patient(request):
+    patients = Patient.objects.filter(is_in_patient=True)
+    return render(request, 'Patient/list.html', {'patients':patients})
+
+def out_patient(request):
+    patients = Patient.objects.filter(is_in_patient=False)
+    return render(request, 'Patient/list.html', {'patients':patients})
+
+def register_patient(request):
+    if request.method == 'POST':
+        form = patientForm(request.POST)
+        if form.is_valid():
+            reg = form.save(commit=False)
+            reg.save()
+            return redirect('Patient.views.patient_list')
+    else:
+        form = patientForm()
+        return render(request, 'Patient/register.html', {'form':form})

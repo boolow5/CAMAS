@@ -1,0 +1,12 @@
+{% extends "Patient/base.html" %}
+{% block content %}
+<form id="search-form" method="get" action=".">
+	{{ form.as_p }}
+	<input type="submit" value="Search"/>
+</form>
+<div id="search-results">
+	{% if condition %}
+		{% include 'list.html' %}
+	{% endif %}
+</div>
+{% endblock %}

@@ -14,7 +14,6 @@ body {
 	background-repeat: no-repeat;
 	box-shadow: 0 0 5px black;
 	border-bottom: 2px groove black;
-	position: fixed auto;
 }
 
 #banner1 {
@@ -96,3 +95,8 @@ p.pub_date {
 #article_detail {
 	padding: 3em;
 }
+
+li.patient_list {
+	list-style-type:square;
+	
+	}

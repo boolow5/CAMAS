@@ -1,0 +1,16 @@
+{% extends 'Patient/base.html' %}
+{% block content %}
+	<h3 onclick='$("ul").slideToggle()' >All Patients</h3>
+	<ul id='pt-list1'>
+	{% for patient in patients %}
+		<a href="{% url 'patient_profile' pk=patient.pk %}" ><li class=paitent_list > {{ patient.pk }} {{ patient.full_name }} </li></a>
+	{% endfor %}
+	</ul>
+	<h3 onclick='$("ul").slideToggle()' >All Patients</h3>
+	<ul id='pt-list2'>
+	{% for patient in patients %}
+		<a href="{% url 'patient_profile' pk=patient.pk %}" ><li class=paitent_list > {{ patient.pk }} {{ patient.full_name }} </li></a>
+	{% endfor %}
+	</ul>
+	
+{% endblock %}

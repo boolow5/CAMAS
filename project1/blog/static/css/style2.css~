@@ -3,7 +3,7 @@ body {
 	margin: 0 auto;
 }
 #wrapper {
-	margin: 20 auto;
+	margin: auto;
 }
 
 #header {

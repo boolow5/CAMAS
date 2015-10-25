@@ -1,0 +1,10 @@
+{% extends 'Patient/base.html' %}
+{% block content %}
+	<h3>All Patients</h3>
+	<ul>
+	{% for patient in patients %}
+		<a href="{% url 'patient_profile' pk=patient.pk %}" ><li class=paitent_list > {{ patient.pk }} {{ patient.full_name }} </li></a>
+	{% endfor %}
+	</ul>
+	
+{% endblock %}

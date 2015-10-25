@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="{%	static	'css/style.css' %}" media="screen" />
+	<script type="text/javascript" src="static/js/jquery.js"></script>
+	
+</head>
+<body>
+			
+	<div id="wrapper">
+
+		<div id="header">
+			<div id="logotext">
+				<span id="biggestheader">BolSoft</span><br/>
+				<span id="subheader">Hospital Management System</span>
+			</div><!-- logo -->
+		</div><!-- header -->
+ 
+ 		<div id="mid_container">
+ 		 
+ 		<div id="content">
+ 			{% block content %}
+ 			{% endblock %}
+ 		</div><!-- content -->
+
+		<div id="sidebar"><h3>MENUS</h3></div>		
+		
+		</div> <!-- mid container -->
+		
+		<div id="footer">
+		</div><!-- footer -->
+
+	</div><!-- wrapper -->
+		
+</body>
+</html>

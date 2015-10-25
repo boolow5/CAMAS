@@ -7,5 +7,6 @@ urlpatterns = [
                url(r'^/in/$', views.in_patient, name='in_patient'),
                url(r'^/out/$', views.out_patient, name='out_patient'),
                url(r'^/register/$', views.register_patient, name='register_patient'),
+               #url(r'^/search/$', views.search_page, name = 'search_page'),
 
     ]

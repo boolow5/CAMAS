@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="12" version="2.0">
+<workbench progressCount="18" version="2.0">
 <workbenchAdvisor/>
-<window height="703" maximized="true" width="1034" x="333" y="24">
+<window height="587" maximized="true" width="619" x="61" y="84">
 <fastViewData fastViewLocation="1024"/>
 <intro standby="true"/>
 <perspectiveBar>
@@ -49,6 +49,8 @@
 <part id="7"/>
 <part id="8"/>
 <part id="9"/>
+<part id="10"/>
+<part id="11"/>
 </presentation>
 </folder>
 </info>
@@ -63,35 +65,43 @@
 </editor>
 <editor id="org.python.pydev.editor.PythonEditor" name="admin.py" partName="admin" path="/home/boolow5/EclipseProjects/HMS/Patient/admin.py" title="admin" tooltip="HMS/Patient/admin.py" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/HMS/Patient/admin.py"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="118" selectionTopPixel="0"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="184" selectionTopPixel="0"/>
 </editor>
 <editor id="org.python.pydev.editor.PythonEditor" name="urls.py" partName="urls (Patient)" path="/home/boolow5/EclipseProjects/HMS/Patient/urls.py" title="urls (Patient)" tooltip="HMS/Patient/urls.py" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/HMS/Patient/urls.py"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="456" selectionTopPixel="0"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
 </editor>
 <editor id="org.python.pydev.editor.PythonEditor" name="views.py" partName="views" path="/home/boolow5/EclipseProjects/HMS/Patient/views.py" title="views" tooltip="HMS/Patient/views.py" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/HMS/Patient/views.py"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="953" selectionTopPixel="299"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1527" selectionTopPixel="350"/>
 </editor>
 <editor id="org.python.pydev.editor.PythonEditor" name="models.py" partName="models" path="/home/boolow5/EclipseProjects/HMS/Patient/models.py" title="models" tooltip="HMS/Patient/models.py" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/HMS/Patient/models.py"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="12" selectionTopPixel="0"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="4" selectionTopPixel="0"/>
 </editor>
-<editor id="org.kacprzak.eclipse.django_editor.editors.DjangoEditor" name="list.html" partName="list.html" path="/home/boolow5/EclipseProjects/HMS/Patient/templates/Patient/list.html" title="list.html" tooltip="HMS/Patient/templates/Patient/list.html" workbook="DefaultEditorWorkbook">
+<editor activePart="true" focus="true" id="org.kacprzak.eclipse.django_editor.editors.DjangoEditor" name="list.html" partName="list.html" path="/home/boolow5/EclipseProjects/HMS/Patient/templates/Patient/list.html" title="list.html" tooltip="HMS/Patient/templates/Patient/list.html" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/HMS/Patient/templates/Patient/list.html"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="63" selectionTopPixel="0"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="98" selectionTopPixel="0"/>
 </editor>
 <editor id="org.kacprzak.eclipse.django_editor.editors.DjangoEditor" name="profile.html" partName="profile.html" path="/home/boolow5/EclipseProjects/HMS/Patient/templates/Patient/profile.html" title="profile.html" tooltip="HMS/Patient/templates/Patient/profile.html" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/HMS/Patient/templates/Patient/profile.html"/>
 <editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="48" selectionTopPixel="0"/>
 </editor>
-<editor activePart="true" focus="true" id="org.python.pydev.editor.PythonEditor" name="forms.py" partName="forms" path="/home/boolow5/EclipseProjects/HMS/Patient/forms.py" title="forms" tooltip="HMS/Patient/forms.py" workbook="DefaultEditorWorkbook">
+<editor id="org.python.pydev.editor.PythonEditor" name="forms.py" partName="forms" path="/home/boolow5/EclipseProjects/HMS/Patient/forms.py" title="forms" tooltip="HMS/Patient/forms.py" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/HMS/Patient/forms.py"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="335" selectionTopPixel="0"/>
 </editor>
 <editor id="org.kacprzak.eclipse.django_editor.editors.DjangoEditor" name="register.html" partName="register.html" path="/home/boolow5/EclipseProjects/HMS/Patient/templates/Patient/register.html" title="register.html" tooltip="HMS/Patient/templates/Patient/register.html" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/HMS/Patient/templates/Patient/register.html"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="283" selectionTopPixel="0"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="73" selectionTopPixel="0"/>
+</editor>
+<editor id="org.kacprzak.eclipse.django_editor.editors.DjangoEditor" name="base.html" partName="base.html" path="/home/boolow5/EclipseProjects/HMS/Patient/templates/Patient/base.html" title="base.html" tooltip="HMS/Patient/templates/Patient/base.html" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/HMS/Patient/templates/Patient/base.html"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="257" selectionTopPixel="0"/>
+</editor>
+<editor id="org.kacprzak.eclipse.django_editor.editors.DjangoEditor" name="search.html" partName="search.html" path="/home/boolow5/EclipseProjects/HMS/Patient/templates/Patient/search.html" title="search.html" tooltip="HMS/Patient/templates/Patient/search.html" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/HMS/Patient/templates/Patient/search.html"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="274" selectionTopPixel="0"/>
 </editor>
 </editors>
 <views>
@@ -164,14 +174,14 @@
 <viewState CommonNavigator.LINKING_ENABLED="0" org.eclipse.ui.navigator.resources.workingSets.showTopLevelWorkingSets="0">
 <expanded IMemento.internal.id="/home/boolow5/EclipseProjects/HMS"/>
 <expanded IMemento.internal.id="/home/boolow5/EclipseProjects/HMS/Patient"/>
-<expanded IMemento.internal.id="/home/boolow5/EclipseProjects/HMS/Patient/templates"/>
-<expanded IMemento.internal.id="/home/boolow5/EclipseProjects/HMS/Patient/templates/Patient"/>
-<selected IMemento.internal.id="/home/boolow5/EclipseProjects/HMS"/>
+<expanded IMemento.internal.id="/home/boolow5/EclipseProjects/HMS/Patient/static"/>
+<expanded IMemento.internal.id="/home/boolow5/EclipseProjects/HMS/Patient/static/css"/>
+<selected IMemento.internal.id="/home/boolow5/EclipseProjects/HMS/Patient/static/css/style.css"/>
 </viewState>
 </view>
 <view id="org.eclipse.jdt.ui.JavadocView" partName="Javadoc"/>
 </views>
-<perspectives activePart="org.python.pydev.editor.PythonEditor" activePerspective="org.python.pydev.ui.PythonPerspective">
+<perspectives activePart="org.eclipse.ui.console.ConsoleView" activePerspective="org.python.pydev.ui.PythonPerspective">
 <perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
 <descriptor class="org.eclipse.ui.internal.ide.application.ResourcePerspective" id="org.eclipse.ui.resourcePerspective" label="Resource"/>
 <alwaysOnActionSet id="org.eclipse.ui.cheatsheets.actionSet"/>
@@ -425,163 +435,163 @@
 <workingSets/>
 <navigationHistory>
 <editors>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" path="/HMS/Patient/urls.py"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" path="/HMS/Patient/views.py"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" path="/HMS/Patient/models.py"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.kacprzak.eclipse.django_editor.editors.DjangoEditor" path="/HMS/Patient/templates/Patient/list.html"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.kacprzak.eclipse.django_editor.editors.DjangoEditor" path="/HMS/Patient/templates/Patient/profile.html"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.kacprzak.eclipse.django_editor.editors.DjangoEditor" path="/HMS/Patient/templates/Patient/base.html"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" path="/HMS/Patient/forms.py"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" path="/HMS/Patient/views.py"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.kacprzak.eclipse.django_editor.editors.DjangoEditor" path="/HMS/Patient/templates/Patient/search.html"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.kacprzak.eclipse.django_editor.editors.DjangoEditor" path="/HMS/Patient/templates/Patient/list.html"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" path="/HMS/Patient/urls.py"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.kacprzak.eclipse.django_editor.editors.DjangoEditor" path="/HMS/Patient/templates/Patient/register.html"/>
 </editors>
-<item historyLabel="views" index="1">
-<position info="not_deleted" x="1323" y="0"/>
+<item historyLabel="search.html" index="3">
+<position info="not_deleted" x="274" y="0"/>
 </item>
-<item historyLabel="urls (Patient)" index="0">
-<position info="not_deleted" x="310" y="0"/>
+<item historyLabel="list.html" index="4">
+<position info="not_deleted" x="738" y="0"/>
 </item>
-<item historyLabel="list.html" index="3">
-<position info="not_deleted" x="259" y="0"/>
-</item>
-<item historyLabel="urls (Patient)" index="0">
-<position info="not_deleted" x="242" y="0"/>
-</item>
-<item historyLabel="views" index="1">
-<position info="not_deleted" x="1324" y="0"/>
-</item>
-<item historyLabel="urls (Patient)" index="0">
-<position info="not_deleted" x="242" y="0"/>
-</item>
-<item historyLabel="list.html" index="3">
-<position info="not_deleted" x="61" y="0"/>
-</item>
-<item historyLabel="urls (Patient)" index="0">
-<position info="not_deleted" x="242" y="0"/>
-</item>
-<item historyLabel="list.html" index="3">
-<position info="not_deleted" x="95" y="0"/>
-</item>
-<item historyLabel="urls (Patient)" index="0">
-<position info="not_deleted" x="242" y="0"/>
-</item>
-<item historyLabel="list.html" index="3">
-<position info="not_deleted" x="94" y="0"/>
-</item>
-<item historyLabel="profile.html" index="4">
-<position info="not_deleted" x="48" y="0"/>
-</item>
-<item historyLabel="list.html" index="3">
-<position info="not_deleted" x="63" y="0"/>
-</item>
-<item historyLabel="urls (Patient)" index="0">
-<position info="not_deleted" x="266" y="0"/>
-</item>
-<item historyLabel="views" index="1">
-<position info="not_deleted" x="525" y="0"/>
-</item>
-<item historyLabel="urls (Patient)" index="0">
-<position info="not_deleted" x="326" y="0"/>
-</item>
-<item historyLabel="views" index="1">
-<position info="not_deleted" x="691" y="0"/>
-</item>
-<item historyLabel="urls (Patient)" index="0">
-<position info="not_deleted" x="326" y="0"/>
-</item>
-<item historyLabel="forms" index="5">
-<position info="not_deleted" x="239" y="0"/>
-</item>
-<item historyLabel="models" index="2">
-<position info="not_deleted" x="118" y="0"/>
-</item>
-<item historyLabel="forms" index="5">
-<position info="not_deleted" x="240" y="0"/>
-</item>
-<item historyLabel="views" index="1">
-<position info="not_deleted" x="1321" y="0"/>
-</item>
-<item historyLabel="register.html" index="6">
-<position info="not_deleted" x="149" y="1"/>
-</item>
-<item historyLabel="views" index="1">
-<position info="not_deleted" x="1321" y="0"/>
-</item>
-<item historyLabel="register.html" index="6">
-<position info="not_deleted" x="206" y="0"/>
-</item>
-<item historyLabel="urls (Patient)" index="0">
-<position info="not_deleted" x="456" y="0"/>
-</item>
-<item historyLabel="profile.html" index="4">
-<position info="not_deleted" x="48" y="0"/>
-</item>
-<item historyLabel="models" index="2">
-<position info="not_deleted" x="118" y="0"/>
-</item>
-<item historyLabel="views" index="1">
-<position info="not_deleted" x="1321" y="0"/>
-</item>
-<item historyLabel="forms" index="5">
-<position info="not_deleted" x="238" y="0"/>
-</item>
-<item historyLabel="register.html" index="6">
-<position/>
-</item>
-<item historyLabel="views" index="1">
-<position info="not_deleted" x="1321" y="0"/>
-</item>
-<item historyLabel="views" index="1">
-<position/>
-</item>
-<item historyLabel="views" index="1">
-<position/>
-</item>
-<item historyLabel="views" index="1">
-<position/>
-</item>
-<item historyLabel="register.html" index="6">
-<position info="not_deleted" x="286" y="0"/>
-</item>
-<item historyLabel="views" index="1">
-<position info="not_deleted" x="1245" y="0"/>
-</item>
-<item historyLabel="register.html" index="6">
-<position info="not_deleted" x="283" y="0"/>
-</item>
-<item historyLabel="views" index="1">
-<position info="not_deleted" x="1223" y="0"/>
-</item>
-<item historyLabel="models" index="2">
-<position info="not_deleted" x="118" y="0"/>
-</item>
-<item historyLabel="views" index="1">
-<position info="not_deleted" x="1223" y="0"/>
-</item>
-<item historyLabel="models" index="2">
-<position info="not_deleted" x="118" y="0"/>
-</item>
-<item historyLabel="views" index="1">
-<position/>
-</item>
-<item historyLabel="models" index="2">
-<position info="not_deleted" x="424" y="0"/>
-</item>
-<item historyLabel="views" index="1">
-<position info="not_deleted" x="1327" y="0"/>
-</item>
-<item historyLabel="urls (Patient)" index="0">
-<position info="not_deleted" x="456" y="0"/>
-</item>
-<item historyLabel="views" index="1">
-<position info="not_deleted" x="986" y="0"/>
-</item>
-<item historyLabel="models" index="2">
+<item historyLabel="search.html" index="3">
 <position info="not_deleted" x="12" y="0"/>
 </item>
-<item historyLabel="views" index="1">
-<position info="not_deleted" x="953" y="0"/>
+<item historyLabel="urls (Patient)" index="5">
+<position info="not_deleted" x="487" y="0"/>
 </item>
-<item active="true" historyLabel="forms" index="5">
-<position info="not_deleted" x="238" y="0"/>
+<item historyLabel="forms" index="1">
+<position/>
+</item>
+<item historyLabel="views" index="2">
+<position/>
+</item>
+<item historyLabel="urls (Patient)" index="5">
+<position info="not_deleted" x="492" y="0"/>
+</item>
+<item historyLabel="search.html" index="3">
+<position info="not_deleted" x="274" y="0"/>
+</item>
+<item historyLabel="forms" index="1">
+<position info="not_deleted" x="335" y="0"/>
+</item>
+<item historyLabel="views" index="2">
+<position info="not_deleted" x="1299" y="0"/>
+</item>
+<item historyLabel="search.html" index="3">
+<position info="not_deleted" x="274" y="0"/>
+</item>
+<item historyLabel="urls (Patient)" index="5">
+<position info="not_deleted" x="492" y="0"/>
+</item>
+<item historyLabel="views" index="2">
+<position info="not_deleted" x="153" y="0"/>
+</item>
+<item historyLabel="forms" index="1">
+<position info="not_deleted" x="335" y="0"/>
+</item>
+<item historyLabel="urls (Patient)" index="5">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="base.html" index="0">
+<position info="not_deleted" x="1305" y="0"/>
+</item>
+<item historyLabel="list.html" index="4">
+<position/>
+</item>
+<item historyLabel="base.html" index="0">
+<position info="not_deleted" x="568" y="0"/>
+</item>
+<item historyLabel="list.html" index="4">
+<position info="not_deleted" x="721" y="0"/>
+</item>
+<item historyLabel="base.html" index="0">
+<position info="not_deleted" x="859" y="0"/>
+</item>
+<item historyLabel="views" index="2">
+<position info="not_deleted" x="153" y="0"/>
+</item>
+<item historyLabel="list.html" index="4">
+<position info="not_deleted" x="721" y="0"/>
+</item>
+<item historyLabel="base.html" index="0">
+<position info="not_deleted" x="906" y="0"/>
+</item>
+<item historyLabel="views" index="2">
+<position info="not_deleted" x="1400" y="0"/>
+</item>
+<item historyLabel="base.html" index="0">
+<position info="not_deleted" x="936" y="0"/>
+</item>
+<item historyLabel="views" index="2">
+<position info="not_deleted" x="1400" y="0"/>
+</item>
+<item historyLabel="base.html" index="0">
+<position info="not_deleted" x="1492" y="0"/>
+</item>
+<item historyLabel="list.html" index="4">
+<position info="not_deleted" x="98" y="0"/>
+</item>
+<item historyLabel="views" index="2">
+<position info="not_deleted" x="1164" y="0"/>
+</item>
+<item historyLabel="list.html" index="4">
+<position info="not_deleted" x="465" y="0"/>
+</item>
+<item historyLabel="views" index="2">
+<position info="not_deleted" x="1164" y="0"/>
+</item>
+<item historyLabel="register.html" index="6">
+<position/>
+</item>
+<item historyLabel="list.html" index="4">
+<position info="not_deleted" x="33" y="0"/>
+</item>
+<item historyLabel="register.html" index="6">
+<position info="not_deleted" x="120" y="0"/>
+</item>
+<item historyLabel="list.html" index="4">
+<position info="not_deleted" x="518" y="0"/>
+</item>
+<item historyLabel="register.html" index="6">
+<position/>
+</item>
+<item historyLabel="list.html" index="4">
+<position info="not_deleted" x="518" y="0"/>
+</item>
+<item historyLabel="register.html" index="6">
+<position/>
+</item>
+<item historyLabel="list.html" index="4">
+<position info="not_deleted" x="205" y="44"/>
+</item>
+<item historyLabel="register.html" index="6">
+<position info="not_deleted" x="82" y="0"/>
+</item>
+<item historyLabel="base.html" index="0">
+<position/>
+</item>
+<item historyLabel="list.html" index="4">
+<position info="not_deleted" x="205" y="44"/>
+</item>
+<item historyLabel="base.html" index="0">
+<position info="not_deleted" x="1482" y="0"/>
+</item>
+<item historyLabel="list.html" index="4">
+<position info="not_deleted" x="738" y="0"/>
+</item>
+<item historyLabel="base.html" index="0">
+<position info="not_deleted" x="693" y="0"/>
+</item>
+<item historyLabel="list.html" index="4">
+<position info="not_deleted" x="53" y="0"/>
+</item>
+<item historyLabel="register.html" index="6">
+<position info="not_deleted" x="323" y="0"/>
+</item>
+<item historyLabel="base.html" index="0">
+<position info="not_deleted" x="257" y="0"/>
+</item>
+<item historyLabel="register.html" index="6">
+<position info="not_deleted" x="73" y="0"/>
+</item>
+<item active="true" historyLabel="list.html" index="4">
+<position info="not_deleted" x="53" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -589,6 +599,9 @@
 <workbenchWindowAdvisor/>
 <actionBarAdvisor/>
 <trimLayout>
+<trimArea IMemento.internal.id="16384">
+<trimItem IMemento.internal.id="topLeft"/>
+</trimArea>
 <trimArea IMemento.internal.id="131072">
 <trimItem IMemento.internal.id="org.eclipse.ui.internal.ViewStack@6e92d505"/>
 </trimArea>
@@ -599,10 +612,20 @@
 <trimItem IMemento.internal.id="org.eclise.ui.internal.FastViewBar"/>
 <trimItem IMemento.internal.id="org.eclipse.jface.action.StatusLineManager"/>
 <trimItem IMemento.internal.id="org.eclipse.ui.internal.progress.ProgressRegion"/>
+<trimItem IMemento.internal.id="bottom"/>
 </trimArea>
 </trimLayout>
 </window>
 <mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.systemExternalEditor" name="style.css" tooltip="HMS/Patient/static/css/style.css">
+<persistable path="/HMS/Patient/static/css/style.css"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.kacprzak.eclipse.django_editor.editors.DjangoEditor" name="search.html" tooltip="HMS/Patient/templates/Patient/search.html">
+<persistable path="/HMS/Patient/templates/Patient/search.html"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.kacprzak.eclipse.django_editor.editors.DjangoEditor" name="base.html" tooltip="HMS/Patient/templates/Patient/base.html">
+<persistable path="/HMS/Patient/templates/Patient/base.html"/>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.kacprzak.eclipse.django_editor.editors.DjangoEditor" name="register.html" tooltip="HMS/Patient/templates/Patient/register.html">
 <persistable path="/HMS/Patient/templates/Patient/register.html"/>
 </file>
@@ -638,15 +661,6 @@
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" name="forms.py" tooltip="project1/blog/forms.py">
 <persistable path="/project1/blog/forms.py"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.systemExternalEditor" name="style1.css" tooltip="project1/blog/static/css/style1.css">
-<persistable path="/project1/blog/static/css/style1.css"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" name="base.html" tooltip="project1/blog/templates/blog/base.html">
-<persistable path="/project1/blog/templates/blog/base.html"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" name="admin.py" tooltip="project1/blog/admin.py">
-<persistable path="/project1/blog/admin.py"/>
 </file>
 </mruList>
 </workbench>
