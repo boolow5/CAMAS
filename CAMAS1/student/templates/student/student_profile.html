@@ -1,0 +1,54 @@
+<h1>{{ student }}'s Profile</h1>
+<table>
+	<tr>
+		<td><em>Name</em></td>
+		<td><b>{{ student }}</b></td>
+	</tr>
+	<tr>
+		<td><em>Date of Birth</em></td>
+		<td><b>{{ student.DoBirth }}</b></td>
+	</tr>
+	<tr>
+		<td><em>Address</em></td>
+		<td><b>{{ student.address }}</b></td>
+	</tr>
+	<tr>
+		<td><em>Phone</em></td>
+		<td><b>{{ student.phone }}</b></td>
+	</tr>
+	<tr>
+		<td><em>Guardian</em></td>
+		<td><b>{{ student.guardian }}</b></td>
+	</tr>
+	<tr>
+		<td><em>Guardian's Phone</em></td>
+		<td><b>{{ student.guardian_phone }}</b></td>
+	</tr>
+	<tr>
+		<td><em>Status</em></td>
+		<td><b>
+		{% if student.status %}
+			Active
+		{% else %}
+			Inactive
+		{% endif %}
+		</b></td>
+	</tr>
+	<tr>
+		<td><em>Registered Date</em></td>
+		<td><b>{{ student.registered }}</b></td>
+	</tr>
+	<tr>
+		<td><em>Registered by</em></td>
+		<td><b>{{ student.registered_by }}</b></td>
+	</tr>
+	<tr>
+		<td><em>Class</em></td>
+		<td><b>{{ student.classroom }}</b></td>
+	</tr>
+	<tr>
+		<td><em>Last Updated</em></td>
+		<td><b>{{ student.last_updated }}</b></td>
+	</tr>
+	
+</table>
