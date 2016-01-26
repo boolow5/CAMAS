@@ -1,0 +1,4 @@
+<h1>Teachers</h1>
+{% for teacher in teachers %}
+	<p><a href="{%	url	"teacher_profile"	pk=teacher.pk	%}">{{ teacher }}</a></p>
+{% endfor %}

@@ -1,0 +1,55 @@
+<h1>{{ teacher }}'s Profile - 
+		{% if user.is_staff %}
+			<span class='btn edit-btn'><a href='{% url "update_teacher" pk=teacher.pk %}'>[edit]</a></span>
+		{% endif %}
+</h1>
+
+<table>
+	<tr>
+		<td><em>Name</em></td>
+		<td><b>{{ teacher }}</b></td>
+	</tr>
+	<tr>
+		<td><em>username</em></td>
+		<td><b>{{ teacher.username }}</b></td>
+	</tr>
+	<tr>
+		<td><em>Status</em></td>
+		<td><b>
+		{% if teacher.is_active %}
+			Active
+		{% else %}
+			Inactive
+		{% endif %}
+		</b></td>
+	</tr>
+	<tr>
+		<td><em>Type</em></td>
+		<td><b>
+			{% if teacher.is_staff %}
+				Staff member
+			{% else %}
+				Non-Staff member
+			{% endif %}
+		</b></td>
+	</tr>
+	<tr>
+		<td><em>User type</em></td>
+		<td><b>
+		{% if teacher.is_super %}
+		 	Super user
+		{% else %}
+			Normal user
+		{% endif %}
+		</b></td>
+	</tr>
+	<tr>
+		<td><em>Subject</em></td>
+		<td><b>{{ teacher.subject }}</b></td>
+	</tr>
+	<tr>
+		<td><em>Last Login</em></td>
+		<td><b>{{ teacher.last_login }}</b></td>
+	</tr>
+	
+</table>

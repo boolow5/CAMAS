@@ -1,3 +1,97 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect, render_to_response,\
+    get_object_or_404
+from django.template.context_processors import request
+from django.utils import timezone
+from university.models import *
+from university.forms import *
 
 # Create your views here.
+def teachers_list(request):
+    teachers = Teacher.objects.filter(is_active = True)
+    return render(request, 'teacher/teachers_list.html', {'teachers':teachers})
+
+def teacher_profile(request, pk):
+    teacher = Teacher.objects.get(pk=pk)
+    return render(request, 'teacher/teacher_profile.html', {'teacher': teacher})
+    
+def register_teacher(request):
+    if request.method == "POST":
+        form = TeacherForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('/')
+    else:
+        form = TeacherForm()
+        return render(request, 'teacher/new_teacher.html', {'form':form})
+    
+
+def update_teacher(request, pk):
+    teacher = get_object_or_404(Teacher, pk=pk)
+    if request.method == 'POST':
+        form = TeacherForm(request.POST, instance=teacher)
+        if form.is_valid():
+            teacher = form.save(commit=False)
+            teacher.registered_by = request.user
+            teacher.last_updated = timezone.now()
+            teacher.save()
+            return redirect('university.views.teacher_profile', pk=teacher.pk)
+    else:
+        form = TeacherForm(instance=teacher)
+    
+    return render(request, 'teacher/edit_teacher.html', {'form':form})
+    
+
+def deactivate_teacher(request, pk):
+    teacher = get_object_or_404(Teacher, pk=pk)
+    if request.method == 'POST':
+        teacher.status = False
+        teacher.last_updated = timezone.now()
+        teacher.save()
+    return redirect('university.views.teacher_profile', pk=teacher.pk)
+
+
+#student1 related views
+def students_list(request):
+    students = Student.objects.all()
+    return render(request, 'student/students_list.html', {'students':students})
+
+def student_profile(request, pk):
+    student = Student.objects.get(pk=pk)
+    return render(request, 'student/student_profile.html', {'student': student})
+    
+def register_student(request):
+    if request.method == "POST":
+        form = StudentForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('/')
+    else:
+        form = StudentForm()
+        return render(request, 'student/new_student.html', {'form':form})
+    
+
+def update_student(request, pk):
+    student = get_object_or_404(Student, pk=pk)
+    if request.method == 'POST':
+        form = StudentForm(request.POST, instance=student)
+        if form.is_valid():
+            student = form.save(commit=False)
+            student.registered_by = request.user
+            student.last_updated = timezone.now()
+            student.save()
+            return redirect('university.views.student_profile', pk=student.pk)
+    else:
+        form = StudentForm(instance=student)
+    
+    return render(request, 'student/edit_student.html', {'form':form})
+    
+
+def deactivate_student(request, pk):
+    student = get_object_or_404(Student, pk=pk)
+    if request.method == 'POST':
+        student.status = False
+        student.last_updated = timezone.now()
+        student.save()
+    return redirect('university.views.students_profile', pk=student.pk)
+
+

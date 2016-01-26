@@ -15,10 +15,9 @@ Including another URLconf
 """
 from django.conf.urls import include, url
 from django.contrib import admin
-import student
+
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
-    #url(r'^/', include('student.urls')),
-    url(r'^student', include('student.urls'))
+    url(r'^cms/', include('university.urls')),
 ]

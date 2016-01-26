@@ -1,4 +1,8 @@
-<h1>{{ student }}'s Profile</h1>
+<h1>{{ student }}'s Profile - 
+		{% if user.is_staff %}
+			<span class='btn edit-btn'><a href='{% url "update_student" pk=student.pk %}'>[edit]</a></span>
+		{% endif %}
+		</h1>
 <table>
 	<tr>
 		<td><em>Name</em></td>

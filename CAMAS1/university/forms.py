@@ -2,16 +2,29 @@ from django.forms.models import ModelForm
 from .models import *
 
 
+class TeacherForm(ModelForm):
+    class Meta:
+        model = Teacher
+        fields = ('first_name', 'last_name', 'username', 'password', 'subject')
+        
+class FacultyForm(ModelForm):
+    class Meta:
+        model = Faculty
+        fields = ('name','description', 'dean')
+        
+class DepartmentForm(ModelForm):
+    class Meta:
+        model = Department
+        fields = ('name','faculty')
+        
+#student1 related forms
+
 class StudentForm(ModelForm):
     class Meta:
         model = Student
         fields = ('fname', 'mname', 'lname','DoBirth', 'phone', 'address', 'guardian', 'guardian_phone', 'classroom')
         
-class ClassForm(ModelForm):
-    class Meta:
-        model = Class
-        fields = ('level','description')
-        
+  
 class YearForm(ModelForm):
     class Meta:
         model = Year
