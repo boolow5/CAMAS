@@ -13,7 +13,11 @@ urlpatterns = [
                url(r'^edit/student/(?P<pk>[0-9]+)/$', views.update_student, name='update_student'),
                url(r'^accounts/$', views.accounts_list, name='accounts_list'),
                url(r'^account/(?P<pk>[0-9]+)/$', views.account_details, name='account_details'),
-               url(r'^edit/account/(?P<pk>[0-9]+)/', views.edit_account, name='edit_account'),
-               url(r'^new/account/', views.create_account, name='create_account')
+               #url(r'^edit/account/(?P<pk>[0-9]+)/', views.edit_account, name='edit_account'),
+               url(r'^new/account/', views.create_account, name='create_account'),
+               url(r'^payments/(?P<pk>[0-9]+)/$', views.payments_list, name='payments_list'),
+               url(r'^payment/(?P<pk>[0-9]+)/$', views.payment_details, name='payment_details'),
+               #url(r'^edit/payment/(?P<pk>[0-9]+)/', views.edit_payment, name='edit_account'),
+               url(r'^new/payment/', views.add_payment, name='add_account'),
 
     ]

@@ -132,3 +132,34 @@ def edit_account(request, pk):
     
     return render(request, 'account/edit_account.html', {'form':form, 'account':account})
     
+def add_payment(request):
+    if request.method == 'POST':
+        form = TransactionForm(request.POST)
+        if form.is_valid():
+            payment = form.save(commit=False)
+            if payment.amount > 0:
+                payment.is_debit = True
+            elif payment.amount < 0:
+                payment.is_debit = False
+            else:
+                form = TransactionForm()
+                return render(request, 'payment/new_payment.html', {'form':form, 'error':"Amount cannot be zero!"})
+            acount = Account.objects.get(pk= payment.payee.pk) 
+            acount.balance += payment.amount
+            payment.received_by = request.user
+            payment.save()
+            return redirect('university.views.payment_details', pk=payment.pk)
+    else:
+        form = TransactionForm()
+        return render(request, 'payment/new_payment.html', {'form':form})
+    
+def payments_list(request, pk):
+    payments = Transaction.objects.filter(payee = pk)
+    owner = Account.objects.get(pk=pk)
+    return render(request, 'payment/payments_list.html', {'payments':payments,'owner':owner})
+
+def payment_details(request,pk):
+    payment = get_object_or_404(Transaction, pk=pk)
+    owner = get_object_or_404(Account, pk=payment.payee.pk)
+    return render(request, 'payment/payment_details.html', {'payment':payment, 'owner':owner})
+

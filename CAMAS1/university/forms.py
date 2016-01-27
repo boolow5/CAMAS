@@ -43,7 +43,7 @@ class AccountForm(ModelForm):
 class TransactionForm(ModelForm):
     class Meta:
         model = Transaction
-        fields = ('payee','amount','description','is_debit')
+        fields = ('payee','amount','description')
 
 class BillForm(ModelForm):
     class Meta:

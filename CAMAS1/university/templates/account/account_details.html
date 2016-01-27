@@ -1,8 +1,4 @@
-<h1>{{ account }} Details - 
-		{% if user.is_staff %}
-			<span class='btn edit-btn'><a href='{% url "edit_account" pk=account.pk %}'>[edit]</a></span>
-		{% endif %}
-		</h1>
+<h1>{{ account }} Details</h1>
 <table>
 	<tr>
 		<td><em>Account No</em></td>

@@ -1,0 +1,8 @@
+<h1>{{ owner }}Payments</h1>
+{% if payments %}
+	{% for payment in payments %}
+		<p><b>{{ payment.pk }}</b><a href="{%	url	"payment_details"	pk=payment.pk	%}">{{ payment }}</a></p>
+	{% endfor %}
+{% else %}
+	<p>No payments recieved yet.
+{% endif %}

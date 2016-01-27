@@ -98,9 +98,9 @@ class Transaction(models.Model):
     
     def __str__(self):
         if self.is_debit:
-            return str(self.amount)
+            return '$' + str(self.amount) + ' ' + self.description
         else:
-            return "(" + str(self.amount) + ")"
+            return "( $" + str(self.amount) + ") " + self.description
     
 class Bill(models.Model):
     account = models.ForeignKey(Account)
