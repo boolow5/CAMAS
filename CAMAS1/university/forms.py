@@ -38,7 +38,7 @@ class ClassroomForm(ModelForm):
 class AccountForm(ModelForm):
     class Meta:
         model = Account
-        fields = ('number','balance')
+        fields = ('number', 'owner')
         
 class TransactionForm(ModelForm):
     class Meta:

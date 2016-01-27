@@ -86,7 +86,7 @@ class Account(models.Model):
     balance = models.DecimalField(decimal_places=2, max_digits=12, default=0.0)
     
     def __str__(self):
-        return str(self.number)
+        return str(self.owner) + '(' + str(self.number) + ')'
 
 class Transaction(models.Model):
     received_by = models.ForeignKey(User)

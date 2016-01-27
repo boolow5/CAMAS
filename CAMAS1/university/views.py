@@ -2,10 +2,17 @@ from django.shortcuts import render, redirect, render_to_response,\
     get_object_or_404
 from django.template.context_processors import request
 from django.utils import timezone
+from django.contrib.auth import user_logged_in 
 from university.models import *
 from university.forms import *
 
 # Create your views here.
+def index(request):
+    if user_logged_in:
+        return render(request, 'index.html')
+    else:
+        return render(request, 'login.html')
+
 def teachers_list(request):
     teachers = Teacher.objects.filter(is_active = True)
     return render(request, 'teacher/teachers_list.html', {'teachers':teachers})
@@ -94,4 +101,34 @@ def deactivate_student(request, pk):
         student.save()
     return redirect('university.views.students_profile', pk=student.pk)
 
+#payment related views
+def create_account(request):
+    if request.method == 'POST':
+        form = AccountForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('/cms/accounts')
+    else:
+        form = AccountForm()
+        return render(request, 'account/new_account.html', {'form':form})
 
+def accounts_list(request):
+    accounts = Account.objects.all()
+    return render(request, 'account/accounts_list.html', {'accounts':accounts})
+
+def account_details(request, pk):
+    account = Account.objects.get(pk=pk)
+    return render(request, 'account/account_details.html', {'account':account})
+
+def edit_account(request, pk):
+    account = get_object_or_404(Account, pk=pk)
+    if request.method == 'POST':
+        form = AccountForm(request.POST, instance=account)
+        if form.is_valid():
+            account = form.save()
+            return redirect('university.views.account_details', pk=account.pk)
+    else:
+        form = AccountForm(instance=account)
+    
+    return render(request, 'account/edit_account.html', {'form':form, 'account':account})
+    

@@ -1,0 +1,5 @@
+{% if user.is_authenticated %}
+	<p class='welcomeMessage'>Hi {{ user.username }}, welcome to BolSoft Campus Management System BoCAMS.<p>
+{% else %}
+	Please sign in to continue
+{% endif %}
