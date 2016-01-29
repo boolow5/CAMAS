@@ -1,0 +1,4 @@
+<h1>Exams List</h1>
+{% for exam in exams %}
+	<p><b>{{ exam.pk }}</b><a href="{%	url	"exam_details"	pk=exam.pk	%}">{{ exam }}</a></p>
+{% endfor %}

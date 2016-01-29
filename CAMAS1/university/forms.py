@@ -2,10 +2,16 @@ from django.forms.models import ModelForm
 from .models import *
 
 
-class TeacherForm(ModelForm):
+class EmployeeForm(ModelForm):
     class Meta:
-        model = Teacher
+        model = Employee
         fields = ('first_name', 'last_name', 'username', 'password', 'subject')
+
+class PositionForm(ModelForm):
+    class Meta:
+        model = Position
+        fields = ('name', 'description', 'level')
+
         
 class FacultyForm(ModelForm):
     class Meta:
@@ -49,4 +55,18 @@ class BillForm(ModelForm):
     class Meta:
         model = Bill
         fields = ('amount', 'description')
+
+class ExamTypeForm(ModelForm):
+    class Meta:
+        model = ExamType
+        fields = ('name', 'max_marks')
         
+class ExamForm(ModelForm):
+    class Meta:
+        model = Exam
+        fields = ('title', 'description', 'starting_date', 'type')
+
+class ExamReportForm(ModelForm):
+    class Meta:
+        model = ExamReport
+        fields = ('exam', 'subject', 'student', 'grade', 'note')

@@ -2,10 +2,10 @@ from django.conf.urls import include, url
 from . import views
 
 urlpatterns = [
-               url(r'^teachers/$', views.teachers_list, name='teachers_list'),
-               url(r'^teacher/(?P<pk>[0-9]+)/', views.teacher_profile, name='teacher_profile'),
-               url(r'^new/teacher/$', views.register_teacher, name='register_teacher'),
-               url(r'^edit/teacher/(?P<pk>[0-9]+)/$', views.update_teacher, name='update_teacher'),
+               url(r'^employees/$', views.teachers_list, name='teachers_list'),
+               url(r'^employee/(?P<pk>[0-9]+)/', views.teacher_profile, name='teacher_profile'),
+               url(r'^new/employee/$', views.register_teacher, name='register_teacher'),
+               url(r'^edit/employee/(?P<pk>[0-9]+)/$', views.update_teacher, name='update_teacher'),
                url(r'^$',views.index, name='index'),
                url(r'^students$', views.students_list, name='student_list'),
                url(r'^student/(?P<pk>[0-9]+)/', views.student_profile, name='student_profile'),
@@ -19,5 +19,11 @@ urlpatterns = [
                url(r'^payment/(?P<pk>[0-9]+)/$', views.payment_details, name='payment_details'),
                #url(r'^edit/payment/(?P<pk>[0-9]+)/', views.edit_payment, name='edit_account'),
                url(r'^new/payment/', views.add_payment, name='add_account'),
+               
+               #exam related urls
+               url(r'^new/exam/', views.create_exam, name='create_exam'),
+               url(r'^exams/(?P<pk>[0-9]+)/$', views.exams_list, name='exams_list'),
+               url(r'^edit/exam/(?P<pk>[0-9]+)/$', views.edit_exam, name='edit_exam'),
+               url(r'^exam/(?P<pk>[0-9]+)/$', views.exam_details, name='exam_details'),
 
     ]

@@ -14,28 +14,28 @@ def index(request):
         return render(request, 'login.html')
 
 def teachers_list(request):
-    teachers = Teacher.objects.filter(is_active = True)
+    teachers = Employee.objects.filter(is_active = True)
     return render(request, 'teacher/teachers_list.html', {'teachers':teachers})
 
 def teacher_profile(request, pk):
-    teacher = Teacher.objects.get(pk=pk)
+    teacher = Employee.objects.get(pk=pk)
     return render(request, 'teacher/teacher_profile.html', {'teacher': teacher})
     
 def register_teacher(request):
     if request.method == "POST":
-        form = TeacherForm(request.POST)
+        form = EmployeeForm(request.POST)
         if form.is_valid():
             form.save()
             return redirect('/')
     else:
-        form = TeacherForm()
+        form = EmployeeForm()
         return render(request, 'teacher/new_teacher.html', {'form':form})
     
 
 def update_teacher(request, pk):
-    teacher = get_object_or_404(Teacher, pk=pk)
+    teacher = get_object_or_404(Employee, pk=pk)
     if request.method == 'POST':
-        form = TeacherForm(request.POST, instance=teacher)
+        form = EmployeeForm(request.POST, instance=teacher)
         if form.is_valid():
             teacher = form.save(commit=False)
             teacher.registered_by = request.user
@@ -43,13 +43,13 @@ def update_teacher(request, pk):
             teacher.save()
             return redirect('university.views.teacher_profile', pk=teacher.pk)
     else:
-        form = TeacherForm(instance=teacher)
+        form = EmployeeForm(instance=teacher)
     
     return render(request, 'teacher/edit_teacher.html', {'form':form})
     
 
 def deactivate_teacher(request, pk):
-    teacher = get_object_or_404(Teacher, pk=pk)
+    teacher = get_object_or_404(Employee, pk=pk)
     if request.method == 'POST':
         teacher.status = False
         teacher.last_updated = timezone.now()
@@ -163,3 +163,32 @@ def payment_details(request,pk):
     owner = get_object_or_404(Account, pk=payment.payee.pk)
     return render(request, 'payment/payment_details.html', {'payment':payment, 'owner':owner})
 
+#exam related views
+def create_exam(request):
+    if request.method == 'POST':
+        form = ExamForm(request.POST)
+        if form.is_valid():
+            exam = form.save()
+            return redirect('/cms/exams_list')
+    else:
+        form = ExamForm()
+        return render(request, 'exam/new_exam.html', {'form':form})
+def exams_list(request):
+    exams = Exam.objects.all()
+    return render(request, 'exam/exams_list.html', {'exams':exams})
+
+def exam_details(request, pk):
+    exam = Exam.objects.get(pk=pk)
+    return render(request, 'exam/exam_details.html', {'exam':exam})
+
+def edit_exam(request, pk):
+    exam = get_object_or_404(Exam)
+    if request.method == 'POST':
+        form = ExamForm(request.POST, instance=exam)
+        if form.is_valid():
+            exam = form.save()
+            return redirect('university.views.exam_details', pk=exam.pk)
+    else:
+        form = ExamForm(instance=exam)
+    
+    return render(request, 'exam/edit_exam.html', {'form':form, 'exam':exam})

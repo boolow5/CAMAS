@@ -11,16 +11,24 @@ class Subject(models.Model):
     def __str__(self):
         return self.name
 
+class Position(models.Model):
+    name = models.CharField(max_length=100)
+    description = models.TextField()
+    level = models.IntegerField()
+    
+    def __str__(self):
+        return self.name
 
-class Teacher(User):
+class Employee(User):
     subject = models.ForeignKey(Subject, default=None)
+    position = models.ForeignKey(Position, null=True)
     def __str__(self):
         return self.first_name + ' ' + self.last_name
 
 class Faculty(models.Model):
     name = models.CharField(max_length=100)
     description = models.TextField(max_length=200)
-    dean = models.ForeignKey(Teacher)
+    dean = models.ForeignKey(Employee)
     def __str__(self):
         return self.name
 
@@ -111,3 +119,27 @@ class Bill(models.Model):
     def __str__(self):
         return str(self.amount) + " for " + self.description
 
+class ExamType(models.Model):
+    name = models.CharField(max_length=50)
+    max_marks = models.DecimalField(decimal_places=2, max_digits=3, default=100.0)
+    
+
+class Exam(models.Model):
+    title = models.CharField(max_length=100)
+    description = models.TextField()
+    starting_date = models.DateField()
+    type = models.ForeignKey(ExamType)
+    
+    def __str__(self):
+        return self.title
+
+class ExamReport(models.Model):
+    exam = models.ForeignKey(Exam)
+    subject = models.ForeignKey(Subject)
+    student = models.ForeignKey(Student)
+    grade = models.DecimalField(decimal_places=2, max_digits=3, default=0.0)
+    note = models.TextField()
+    
+    def __str__(self):
+        return self.grade
+    
