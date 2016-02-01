@@ -1,0 +1,8 @@
+{% extends 'university/layout.html' %}
+{% block content %}
+{% endblock %}
+<h1>Exam Types List</h1>
+{% for exam_type in exam_types %}
+	<p><b>{{ exam_type.pk }} - </b><a href="{%	url	"exam_type_details"	pk=exam_type.pk	%}">{{ exam_type }}</a></p>
+{% endfor %}
+{% endblock %}

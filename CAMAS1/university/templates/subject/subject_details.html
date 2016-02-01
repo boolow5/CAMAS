@@ -1,0 +1,17 @@
+{% extends 'university/layout.html' %}
+{% block content %}
+
+<h1>{{ subject }} subject's details</h1>
+<table>
+	<tr>
+		<td><em>Title</em></td>
+		<td><b>{{ subject.name }}</b></td>
+	</tr>
+	<tr>
+		<td><em>Description</em></td>
+		<td><b>{{ subject.description }}</b></td>
+	</tr>
+	
+</table>
+
+{% endblock %}

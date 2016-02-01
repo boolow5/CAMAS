@@ -1,3 +1,6 @@
+{% extends 'university/layout.html' %}
+{% block content %}
+
 <h1>{{ student }}'s Profile - 
 		{% if user.is_staff %}
 			<span class='btn edit-btn'><a href='{% url "update_student" pk=student.pk %}'>[edit]</a></span>
@@ -10,7 +13,7 @@
 	</tr>
 	<tr>
 		<td><em>Date of Birth</em></td>
-		<td><b>{{ student.DoBirth }}</b></td>
+		<td><b>{{ student.DateOfBirth }}</b></td>
 	</tr>
 	<tr>
 		<td><em>Address</em></td>
@@ -32,9 +35,9 @@
 		<td><em>Status</em></td>
 		<td><b>
 		{% if student.status %}
-			Active
+			<span class='bg-primary'>Active</span>
 		{% else %}
-			Inactive
+			<span class='bg-danger'>Inactive</span>
 		{% endif %}
 		</b></td>
 	</tr>
@@ -48,7 +51,7 @@
 	</tr>
 	<tr>
 		<td><em>Class</em></td>
-		<td><b>{{ student.classroom }}</b></td>
+		<td><b><a href="{%	url	"classroom_details"	pk=student.classroom.pk	%}">{{ student.classroom }}</b></td>
 	</tr>
 	<tr>
 		<td><em>Last Updated</em></td>
@@ -56,3 +59,5 @@
 	</tr>
 	
 </table>
+
+{% endblock %}

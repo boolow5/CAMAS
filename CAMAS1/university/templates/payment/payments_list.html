@@ -1,3 +1,6 @@
+{% extends 'university/layout.html' %}
+{% block content %}
+
 <h1>{{ owner }}Payments</h1>
 {% if payments %}
 	{% for payment in payments %}
@@ -6,3 +9,4 @@
 {% else %}
 	<p>No payments recieved yet.
 {% endif %}
+{% endblock %}

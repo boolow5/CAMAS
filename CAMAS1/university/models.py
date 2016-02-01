@@ -56,12 +56,13 @@ class Term(models.Model):
         return self.name
     
     
-class ClassRoom(models.Model):
+class Classroom(models.Model):
     name = models.CharField(max_length=30, default='One')
     current_year = models.ForeignKey(Year)
     current_semester = models.ForeignKey(Term)
     date_opened = models.DateField(default= timezone.now)
     max_year = models.IntegerField(default=4)
+    department = models.ForeignKey(Department, null=True)
     status = models.BooleanField(default=True)
     
     def __str__(self):
@@ -69,10 +70,10 @@ class ClassRoom(models.Model):
 
 
 class Student(models.Model):
-    fname = models.CharField(max_length=30)
-    mname = models.CharField(max_length=30)
-    lname = models.CharField(max_length=30)
-    DoBirth = models.DateField()
+    first_name = models.CharField(max_length=30)
+    middle_name = models.CharField(max_length=30)
+    last_name = models.CharField(max_length=30)
+    DateOfBirth = models.DateField()
     address = models.TextField(default=None)
     phone = models.CharField(max_length=30)
     guardian = models.CharField(max_length=50)
@@ -80,11 +81,11 @@ class Student(models.Model):
     status = models.BooleanField(default=False)
     registered = models.DateField(default = timezone.now)
     registered_by = models.ForeignKey(User)
-    classroom = models.ForeignKey(ClassRoom)
+    classroom = models.ForeignKey(Classroom)
     last_updated = models.DateTimeField(default=timezone.now)
     
     def __str__(self):
-        return self.fname + " " + self.mname + " " + self.lname
+        return self.first_name + " " + self.middle_name + " " + self.last_name
 
 
 
@@ -106,9 +107,9 @@ class Transaction(models.Model):
     
     def __str__(self):
         if self.is_debit:
-            return '$' + str(self.amount) + ' ' + self.description
+            return '$' + str(self.amount)
         else:
-            return "( $" + str(self.amount) + ") " + self.description
+            return "($" + str(abs(self.amount)) +')'
     
 class Bill(models.Model):
     account = models.ForeignKey(Account)
@@ -121,14 +122,18 @@ class Bill(models.Model):
 
 class ExamType(models.Model):
     name = models.CharField(max_length=50)
-    max_marks = models.DecimalField(decimal_places=2, max_digits=3, default=100.0)
+    max_marks = models.DecimalField(decimal_places=2, max_digits=5, default=100.0)
+    
+    def __str__(self):
+        return self.name
     
 
 class Exam(models.Model):
     title = models.CharField(max_length=100)
     description = models.TextField()
-    starting_date = models.DateField()
-    type = models.ForeignKey(ExamType)
+    starting_date = models.DateField(default=timezone.now)
+    e_type = models.ForeignKey(ExamType)
+    is_admission = models.BooleanField(default=False)
     
     def __str__(self):
         return self.title
@@ -137,9 +142,9 @@ class ExamReport(models.Model):
     exam = models.ForeignKey(Exam)
     subject = models.ForeignKey(Subject)
     student = models.ForeignKey(Student)
-    grade = models.DecimalField(decimal_places=2, max_digits=3, default=0.0)
+    grade = models.DecimalField(decimal_places=2, max_digits=5, default=0.0)
     note = models.TextField()
     
     def __str__(self):
-        return self.grade
+        return str(self.grade)
     

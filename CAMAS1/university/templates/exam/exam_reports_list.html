@@ -1,0 +1,8 @@
+{% extends 'university/layout.html' %}
+{% block content %}
+
+<h1>Exam Reports List</h1>
+{% for exam_report in exam_reports %}
+	<p>Name: </b><a href="{%	url	"student_profile"	pk=exam_report.pk	%}">{{ exam_report.student }}</b></a>  - Grade: <b>{{ exam_reports.pk }} - </b><a href="{%	url	"exam_report_details"	pk=exam_report.pk	%}">{{ exam_report }}</a></p>
+{% endfor %}
+{% endblock %}

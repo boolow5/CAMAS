@@ -1,4 +1,9 @@
+{% extends 'university/layout.html' %}
+{% block content %}
+
 <h1>Accounts List</h1>
 {% for account in accounts %}
 	<p><b>{{ account.pk }}</b><a href="{%	url	"account_details"	pk=account.pk	%}">{{ account }}</a></p>
 {% endfor %}
+
+{% endblock %}

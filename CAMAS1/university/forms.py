@@ -23,12 +23,16 @@ class DepartmentForm(ModelForm):
         model = Department
         fields = ('name','faculty')
         
+class SubjectForm(ModelForm):
+    class Meta:
+        model = Subject
+        fields = ('name','description')
 #student1 related forms
 
 class StudentForm(ModelForm):
     class Meta:
         model = Student
-        fields = ('fname', 'mname', 'lname','DoBirth', 'phone', 'address', 'guardian', 'guardian_phone', 'classroom')
+        fields = ('first_name', 'middle_name', 'last_name','DateOfBirth', 'phone', 'address', 'guardian', 'guardian_phone', 'classroom', 'status')
         
   
 class YearForm(ModelForm):
@@ -38,7 +42,7 @@ class YearForm(ModelForm):
         
 class ClassroomForm(ModelForm):
     class Meta:
-        model = ClassRoom
+        model = Classroom
         fields = ('name','current_year','current_semester','max_year', 'status')
         
 class AccountForm(ModelForm):
@@ -64,7 +68,7 @@ class ExamTypeForm(ModelForm):
 class ExamForm(ModelForm):
     class Meta:
         model = Exam
-        fields = ('title', 'description', 'starting_date', 'type')
+        fields = ('title', 'description', 'starting_date', 'e_type', 'is_admission')
 
 class ExamReportForm(ModelForm):
     class Meta:

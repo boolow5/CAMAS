@@ -1,4 +1,11 @@
-<h1>{{ payment }}</h1>
+{% extends 'university/layout.html' %}
+{% block title %} 
+{% if payment.amount > 0 %}Payment by {% else %}Bill for {% endif %}{{ owner }}{% endblock %}
+
+
+{% block content %}
+<div class='payment-details'>
+<h1>{{ payment }} {{ payment.description }}</h1>
 		<h3>Personal Info</h3>
 <table>
 	<tr>
@@ -24,8 +31,14 @@
 		<td><b>{{ payment.payee }}</b></td>
 	</tr>
 	<tr>
-		<td><em>Amount</em></td>
-		<td><b>{{ payment.amount }}</b></td>
+		<td><em>
+			{% if payment.amount > 0 %}
+				Paid amount
+			{% else %}
+				Billed amount
+			{% endif %}
+		</em></td>
+		<td><b>{{ payment }}</b></td>
 	</tr>
 	<tr>
 		<td><em>Description</em></td>
@@ -52,3 +65,7 @@
 	
 </table>
 
+</div>
+
+{% endblock %}
+{% block footer %}{% endblock %}

@@ -1,4 +1,9 @@
+{% extends 'university/layout.html' %}
+{% block content %}
 <h1>Students List</h1>
 {% for student in students %}
-	<p><b>{{ student.pk }}</b><a href="{%	url	"student_profile"	pk=student.pk	%}">{{ student }}</a></p>
+	<p><b>{{ student.pk }}</b><a class="link-{% if student.status %}primary{% else %}danger{% endif %} href="{%	url	"student_profile"	pk=student.pk	%}">{{ student }}</a>
+		
+	</p>
 {% endfor %}
+{% endblock %}

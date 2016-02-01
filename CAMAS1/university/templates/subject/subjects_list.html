@@ -1,0 +1,9 @@
+{% extends 'university/layout.html' %}
+{% block content %}
+
+<h1>Subjects List</h1>
+{% for subject in subjects %}
+	<p><b>{{ subject.pk }} - </b><a href="{%	url	"subject_details"	pk=subject.pk	%}">{{ subject }}</a></p>
+{% endfor %}
+
+{% endblock %}

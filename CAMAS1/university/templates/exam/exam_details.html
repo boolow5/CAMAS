@@ -1,3 +1,6 @@
+{% extends 'university/layout.html' %}
+{% block content %}
+
 <h1>{{ exam }} Details</h1>
 <table>
 	<tr>
@@ -14,7 +17,8 @@
 	</tr>
 	<tr>
 		<td><em>Type</em></td>
-		<td><b>{{ exam.type }}</b></td>
+		<td><b>{{ exam.e_type }}</b></td>
 	</tr>
 	
 </table>
+{% endblock %}

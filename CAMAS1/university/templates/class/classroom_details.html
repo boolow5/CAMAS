@@ -1,0 +1,42 @@
+{% extends 'university/layout.html' %}
+{% block content %}
+
+<h1>{{ classroom }} Details</h1>
+<table>
+	<tr>
+		<td><em>Class Name</em></td>
+		<td><b>{{ classroom.name }}</b></td>
+	</tr>
+	<tr>
+		<td><em>Current Year</em></td>
+		<td><b>{{ classroom.current_year }}</b></td>
+	</tr>
+	<tr>
+		<td><em>Current Semester</em></td>
+		<td><b>{{ classroom.current_semester }}</b></td>
+	</tr>
+	<tr>
+		<td><em>Date opened</em></td>
+		<td><b>{{ classroom.date_opened }}</b></td>
+	</tr>
+	<tr>
+		<td><em>Maximum Years</em></td>
+		<td><b>{{ classroom.max_year}}</b></td>
+	</tr>
+	<tr>
+		<td><em>Department</em></td>
+		<td><b>{{ classroom.department }}</b></td>
+	</tr>
+	<tr>
+		<td><em>Status</em></td>
+		<td><b>
+			{% if classroom.status %}
+				Active
+			{% else %}
+				Not active
+			{% endif %}
+		</b></td>
+	</tr>
+	
+</table>
+{% endblock %}

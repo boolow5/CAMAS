@@ -1,0 +1,16 @@
+{% extends 'university/layout.html' %}
+{% block content %}
+
+<h1>{{ exam_type }} Details</h1>
+<table>
+	<tr>
+		<td><em>Title</em></td>
+		<td><b>{{ exam_type.name }}</b></td>
+	</tr>
+	<tr>
+		<td><em>Max. Marks</em></td>
+		<td><b>{{ exam_type.max_marks }}</b></td>
+	</tr>
+	
+</table>
+{% endblock %}

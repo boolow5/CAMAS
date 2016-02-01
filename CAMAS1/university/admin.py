@@ -10,7 +10,7 @@ admin.site.register(Position)
 #student1 related items
 admin.site.register(Student)
 admin.site.register(Year)
-admin.site.register(ClassRoom)
+admin.site.register(Classroom)
 admin.site.register(Account)
 admin.site.register(Transaction)
 admin.site.register(Bill)

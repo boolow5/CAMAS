@@ -1,0 +1,39 @@
+{% extends 'university/layout.html' %}
+{% block content %}
+
+<h1>Details of 
+<a href="{%	url	"student_profile"	pk=exam_report.student.pk	%}">{{ exam_report.student }}</a>
+ marks for <a href="{%	url	"subject_details"	pk=exam_report.subject.pk	%}">{{ exam_report.subject }} subject</a>
+ </h1>
+<table class='table'>
+	<tr>
+		<td><em>Exam</em></td>
+		<td><b><a href="{%	url	"exam_details"	pk=exam_report.exam.pk	%}">{{ exam_report.exam }}</a></b></td>
+	</tr>
+	<tr>
+		<td><em>Subject</em></td>
+		<td><b><a href="{%	url	"subject_details"	pk=exam_report.subject.pk	%}">{{ exam_report.subject }}</a></b></td>
+	</tr>
+	<tr>
+		<td><em>Student</em></td>
+		<td><b><a href="{%	url	"student_profile"	pk=exam_report.student.pk	%}">{{ exam_report.student }}</a></b></td>
+	</tr>
+	<tr>
+		<td><em>Grade</em></td>
+		<td><b>{{ exam_report.grade }}</b></td>
+	</tr>
+	<tr>
+		<td><em>Max marks</em></td>
+		<td><b>{{ exam_report.exam.e_type.max_marks}}</b></td>
+	</tr>
+	<tr>
+		<td><em>Min marks</em></td>
+		<td><b>{{ minimum }}</b></td>
+	</tr>
+	<tr>
+		<td><em>Note</em></td>
+		<td><b>{{ exam_report.note }}</b></td>
+	</tr>
+	
+</table>
+{% endblock %}

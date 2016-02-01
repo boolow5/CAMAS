@@ -1,0 +1,104 @@
+.registerform {
+	margin-left:auto;
+	margin-right: auto;
+	width: 20em;
+}
+.registerform input, .registerform textarea, .helptext {
+	margin-bottom: 4px;
+	float: right;
+}
+
+
+.helptext {
+	color: green;
+}
+
+.errorlist li {
+	color: red;
+	margin: 2px;
+}
+
+table {
+	margin:auto;
+	box-shadow: 1px 1px 8px black;
+	margin-top: 1em;
+}
+td {
+	padding:.2em;
+	padding-right: .5em;
+	border-left: 1px solid black;
+	border-bottom: 1px solid black;
+	max-width: 12em;
+}
+tr:hover {
+	background: white;
+}
+
+.menus {
+	padding:.5em;
+}
+
+.content h1 {
+	background:lightblue;
+	padding: 2px;
+	border: 1px solid white;
+	box-shadow: 0px 1px 10px black;
+	border-radius: 4px;
+	margin-top: -.3em;
+}
+.content h1:hover {
+	background: #F0FFFF;
+}
+.payment-details {
+	width: 30em;
+	margin: auto;
+}
+
+.banner h1 {
+	color: lightblue;
+	text-shadow: -1px 0px 4px black;
+	font-family: impact;
+	font-size: 4em;
+}
+.banner h3 {
+	color: yellow;
+	text-shadow: -1px -1px 2px black;
+	font-family: verdana;
+}
+
+.banner, .footer, .content {
+	padding: 2em;
+	border: 1px solid gray;
+	background: #F0F0F0;
+	
+}
+.content {
+	box-shadow: 0px 1px 10px black;
+	border: 1px solid white;
+	border-radius: 4px;
+}
+.container {
+	border: 1px solid darkgray;
+	padding-top: 1em;
+	padding-bottom: 1em;
+	border-radius: 2em;
+	box-shadow: -1px 0px 8px gray;
+}
+.banner {
+	border-top-left-radius: 1em;
+	border-top-right-radius: 1em;
+	box-shadow: inset -1px 0px 15px gray;
+	
+}
+.footer {
+	border-bottom-left-radius: 1em;
+	border-bottom-right-radius: 1em;
+	box-shadow: inset -1px 0px 15px gray;
+	margin-top: 1em;
+}
+.footer pre {
+	text-align: center;
+}
+button {
+	box-shadow: inset -1px 0px 5px black;
+}

@@ -1,0 +1,12 @@
+[{'university':[
+	{'NAME':'My University'},
+	{'ADDRESS':'Mogadishu - Somalia'},
+	{'PHONE_NUMBERS' :'252618270616'},]
+},
+
+{'currency':[
+	{'NAME':'US Dollar'},
+	{'SIGN' :'$'},
+	{'VALUE_USD': 1.0},]
+}
+]

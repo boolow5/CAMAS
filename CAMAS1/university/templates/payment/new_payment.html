@@ -1,10 +1,15 @@
+{% extends 'university/layout.html' %}
+{% block content %}
+
+
 <h1>New Payment</h1>
 	<p>
 		{% if error %}
-			{{ error }}
+			<span class='bg-danger'>Error: {{ error }}</span>
 		{% endif %}
 	</p>
 	<form	method="POST"	class="registerform" id="regform">{%	csrf_token	%}
 						{{	form.as_p	}}
 					<button	type="submit"	class="save	btn	btn-default">Register</button>
 	</form>
+{% endblock %}
